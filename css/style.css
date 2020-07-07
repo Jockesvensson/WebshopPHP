@@ -1,0 +1,474 @@
+/* Base */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul,
+nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+
+/* Layout */
+
+.l-constrained {
+    position: relative;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.l-constrained h2 {
+    font-family: MartelSans-extralight;
+}
+
+
+/* Modules */
+
+.header-logo {
+    padding-top: 20px;
+    padding: 15;
+    width: 100%;
+    text-align: center;
+}
+
+.site-nav {
+    height: 40px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    font-family: MartelSans-regular;
+}
+
+@media (max-width:900px) {
+    .site-nav {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .is-site-nav-small {
+        display: none;
+    }
+    .site-nav {
+        display: none;
+    }
+}
+
+.js-search-input {
+    width: 75px;
+    border: none;
+    outline: none;
+    font-family: MartelSans-regular;
+}
+
+.js-search-input-small {
+    margin: 10px 0px 10px 10px;
+    width: 75px;
+    display: block;
+    border: none;
+    outline: none;
+}
+
+.site-nav li {
+    width: 130px;
+}
+
+
+/* Some attributes for the modal, I want everything in the middle of the window and some padding for the edges.*/
+
+.modal-content {
+    position: relative;
+    width: 50%;
+    padding: 20px 30px 30px 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #888;
+    font-family: MartelSans-regular;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .modal-content {
+        width: 100%;
+        font-size: 10px;
+    }
+}
+
+
+/* Products */
+
+
+/* This puts 4 items in a row on larger screens, 3 on a bit smaller etc, down to 1 item on each row on the smallest screens.*/
+
+
+/* It also make this part of the website responsive*/
+
+.product-gallery {
+    margin-bottom: 30px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+    justify-content: center;
+    align-items: center;
+}
+
+.product-item {
+    margin: 30px 0px;
+    width: 235px;
+    height: 335px;
+}
+
+.product-item__title {
+    font-size: 14px;
+    font-family: MartelSans-extralight;
+    color: #a5a5a5;
+}
+
+.product-item__price {
+    font-family: MartelSans-bold;
+}
+
+.product-item__buttons {
+    position: relative;
+    width: 235px;
+    height: 50px;
+    display: border-box;
+    font-family: MartelSans-extralight;
+}
+
+
+/* Buttons */
+
+
+/* Some style for the info button on the page.*/
+
+.btn {
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    transform: translate(-20%, 0%);
+    width: 80px;
+    height: 30px;
+    padding-top: 3px;
+    text-align: center;
+    border: 1px solid #a5a5a5;
+    background-color: #ffffff;
+}
+
+.btn--primary {
+    position: absolute;
+    bottom: 0%;
+    left: 80%;
+    transform: translate(-80%, 0%);
+    width: 80px;
+    height: 30px;
+    padding-top: 3px;
+    text-align: center;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    background-color: #ffffff;
+}
+
+.btn--modal-shop {
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+
+/* Startpage */
+
+.startpage-hero {
+    position: relative;
+    text-align: center;
+}
+
+
+/* This is where the position for the text that will show on the startpage hero image is set. */
+
+.startpage-hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+.startpage-hero-container h1 {
+    font-family: MartelSans-extralight;
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.startpage-hero-container h3 {
+    font-family: MartelSans-extralight;
+    font-size: 30px;
+    line-height: 0.6;
+}
+
+
+/* changning font size so the text wont be to large on smaller screens.*/
+
+@media (max-width: 1087px) {
+    .startpage-hero-container h1 {
+        font-size: 28px;
+    }
+    .startpage-hero-container h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* Ajusting the size of the container on smaller screens so the test will fit it better and lowering the font size to fit aswell*/
+
+@media (max-width: 767px) {
+    .startpage-hero {
+        height: 150px;
+    }
+    .startpage-hero-container {
+        position: absolute;
+        top: -3%;
+        left: 50%;
+        transform: translate(-50%, -3%);
+        width: 200px;
+        height: 145px;
+        margin-top: 10px;
+    }
+    .startpage-hero-container h1 {
+        font-size: 16px;
+    }
+    .startpage-hero-container h3 {
+        font-size: 12px;
+    }
+}
+
+.startpage-banner {
+    position: relative;
+    text-align: center;
+}
+
+
+/* This is where the position for the text that will show on the startpage banner image is set.*/
+
+.startpage-banner-container {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.startpage-banner__image {
+    height: 150px;
+}
+
+
+/* Lowering the font size to make it fit on smaller screens*/
+
+@media (max-width: 479px) {
+    .startpage-banner-container {
+        font-size: 11px;
+    }
+    .startpage-banner__image {
+        height: 150px;
+    }
+}
+
+.startpage-banner-container__subheader {
+    padding-bottom: 30px;
+}
+
+
+/* States */
+
+.is-hidden {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+}
+
+
+/* Should maybe be at the button section. This is the hambuger icon button on small screens*/
+
+.is-button-site-nav-small {
+    margin-bottom: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.is-site-nav-small {
+    margin-right: 20px;
+    font-family: MartelSans-regular;
+}
+
+
+/* Some margin for the nav items to give it some more space between them. Removing the dot to the left of the items*/
+
+.is-site-nav-small li {
+    margin: 10px 0px 10px 10px;
+    list-style-type: none;
+    text-align: left;
+}
+
+
+/* This hides the hamburger icon and the list for small screens if the user forgets to toggle it and go bigger screen */
+
+@media (min-width: 768px) {
+    .is-site-nav-small {
+        display: none !important;
+    }
+    .is-button-site-nav-small {
+        display: none;
+    }
+}
+
+
+/* this is the positioning for the modal-window. I want it a bit more in the center on larger screen. */
+
+.is-modal-window {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 28%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    box-sizing: border-box;
+}
+
+
+/* Here I'm changing the modal-window so it's a bit closer to the top of the screen.*/
+
+@media (max-width: 767px) {
+    .is-modal-window {
+        top: 10%;
+        height: 30%;
+    }
+}
+
+.is-close-modal {
+    position: relative;
+    margin-right: -20px;
+    margin-top: -20px;
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+/* Didn't know if button with .is are going here or in your prefixed buttons section*/
+
+.is-btn--shop {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    color: #ff0000;
+    font-family: MartelSans-regular;
+}
+
+
+/* Helpers */
+
+
+/* .crossing-border {
+    margin: -43px 0px 20px 0px;
+    max-width: 1150px;
+    border: 1px solid #daa520;
+} */
+
+.border-title {
+    position: relative;
+    text-align: center;
+}
+
+.border-title span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+.border-title:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: #eee;
+    content: '';
+}
+
+.searchicon {
+    position: relative;
+    left: 30%;
+    bottom: 75%;
+}
+
+
+/* All downloaded fonts. Used above in the css where needed.*/
+
+@font-face {
+    font-family: MartelSans-bold;
+    src: url(MartelSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-regular;
+    src: url(MartelSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-extralight;
+    src: url(MartelSans-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-light;
+    src: url(MartelSans-Light.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-semibold;
+    src: url(MartelSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-black;
+    src: url(MartelSans-Black.ttf);
+}
+
+@font-face {
+    font-family: MartelSans-extrabold;
+    src: url(MartelSans-ExtraBold.ttf);
+}
